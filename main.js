@@ -120,12 +120,12 @@ function createItemElement(item) {
 
     <div class="div-card-btn">
 
-    <button class="remove btn btn-outline-danger btn-card">🗑️</button>
-      <a href="#formulario"><button class="edit btn btn-outline-warning btn-card">📝</button><a>
+    <button class="remove btn btn-outline-danger btn-card">🗑️ Excluir</button>
+      <a href="#formulario"><button class="edit btn btn-outline-warning btn-card">📝 Editar</button><a>
 
       ${
         item.link
-          ? `<button class="link btn btn-outline-primary btn-card">📹</button> `
+          ? `<button class="link btn btn-outline-primary btn-card">📹 Link</button> `
           : ""
       }
 

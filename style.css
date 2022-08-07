@@ -81,10 +81,6 @@ form button {
 }
 
 
-.remove, .edit, .link{
-width: 80px;
-
-}
 
 /************************** LEFT COLUMN *****************************/
 #left-column {
@@ -195,6 +191,9 @@ iframe{
 ul li h3 {
   margin-top: 0;
 }
+.iframe{
+  border: 1px solid rgba(148, 148, 148, 0.596);
+}
 
 .div-card-btn {
   display: flex;
@@ -202,6 +201,13 @@ ul li h3 {
   gap: 10px;
 }
 
+.remove, .edit, .link{
+min-width: 80px;
+  flex-grow: 1;
+  margin-top: 20px;
+  
+  }
+  
 
 /**************************** FOOTER ****************/
 footer {
