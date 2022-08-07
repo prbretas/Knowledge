@@ -115,9 +115,9 @@ function createItemElement(item) {
       ${item.description}</p>
 
       <iframe src="${
-        item.link
-      }"  class="iframe" width="350" height="315" title="Iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+        item.link // autoplay; 
+      }"  class="iframe" width="350" height="315" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
     <div class="div-card-btn">
 
     <button class="remove btn btn-outline-danger btn-card">🗑️ Excluir</button>
@@ -125,7 +125,7 @@ function createItemElement(item) {
 
       ${
         item.link
-          ? `<button class="link btn btn-outline-primary btn-card">📹 Link</button> `
+          ? `<button class="link btn btn-outline-primary btn-card">📹 Link</button>`
           : ""
       }
 
@@ -231,3 +231,4 @@ btnClearSearch.addEventListener("click", () => {
 });
 
 recoverList();
+
