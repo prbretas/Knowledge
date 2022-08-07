@@ -1,0 +1,231 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+h1{
+  margin: 0;
+}
+h2 {
+  color: rgb(226, 173, 0);
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+/****************************HEADER****************/
+header {
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.849)); 
+  font-weight: 800;
+  color: black;
+}
+
+#Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+ 
+}
+
+
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  }
+
+
+/************** RIGHT COLUMN -  CARTOES**********/
+#right-column {
+  min-width: 300px;
+  padding: 15px 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+form {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 4px;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+#input-description {
+  height: 200px;  
+  resize: none;
+}
+
+#form-btn-box {
+  display: flex;
+  gap: 4px;
+}
+
+#form-btn-box button {
+  flex-grow: 1;
+}
+
+
+.remove{
+width: 200px;
+
+}
+
+.edit{
+
+  width: 200px;
+}
+
+
+.link{
+
+  width: 200px;
+}
+/************************** LEFT COLUMN *****************************/
+
+#left-column {
+  min-height: 100%;
+  min-width: 400px;
+  padding: 30px 20px;
+  background-color: rgb(0, 3, 51);
+  color: white;
+}
+
+#categories {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+#categories > div {
+  padding: 8px;
+  border: 1px solid black;
+  background-color: rgb(6, 0, 41);
+  color: white;
+  filter: drop-shadow(0 0 3px black);
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+#categories > div > p {
+  margin: 0;
+  text-align: center;
+}
+
+.n-category {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+#search-box {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+
+#input-search {
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+#btn-search,
+#btn-clear-search {
+  width: 100px;
+}
+
+#btn-search:hover,
+#btn-clear-search:hover {
+ filter: drop-shadow(0 0 3px grey);
+}
+
+/************************* LISTA DE CARDS **********************/
+ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+ul li {
+  background-color: #e6e6e6;
+  margin: 20px 10px 0;
+  width: 680px;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.623));
+
+  text-align: left;
+  justify-content: space-evenly;
+  padding: 15px;
+  font-size: 0.8rem;
+}
+
+iframe{
+
+  width:650px;
+  height:400px
+}
+
+@media (max-width: 680px)
+{
+  ul li{
+    width: 380px;
+    }
+
+    #right-column{
+
+      margin: 0;
+    }
+
+    iframe{
+
+      width:350px;
+      height:315px
+    }
+}
+
+
+
+ul li h3 {
+  margin-top: 0;
+}
+
+.div-card-btn {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+
+
+
+/**************************** FOOTER ****************/
+footer {
+  position: bottom;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
