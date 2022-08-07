@@ -75,6 +75,8 @@ function createItem() {
   saveList();
 }
 
+
+// FUNÇÂO EDITAR ITENS
 function editItem(itemToEdit) {
   const { title, about, category, description, link } = itemToEdit;
 
@@ -98,7 +100,7 @@ function removeItem(itemId) {
   }
 }
 
-//CRIA ELEMENTO HTML DO ITEM
+//CRIAR ELEMENTO HTML
 
 function createItemElement(item) {
   const li = document.createElement("li");
@@ -112,21 +114,22 @@ function createItemElement(item) {
       <p><strong>Descrição:</strong> 
       ${item.description}</p>
 
+      <iframe src="${
+        item.link
+      }"  class="iframe" width="350" height="315" title="Iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      <iframe src="${item.link}"  class="iframe" width="350" height="315" title="Iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-<div class="div-card-btn">
+    <div class="div-card-btn">
 
     <button class="remove btn btn-outline-danger btn-card">🗑️</button>
-      <button class="edit btn btn-outline-warning btn-card">📝</button>
+      <a href="#formulario"><button class="edit btn btn-outline-warning btn-card">📝</button><a>
 
-      ${item.link ? `<button class="link btn btn-outline-primary btn-card">📹</button> ` : ""}
+      ${
+        item.link
+          ? `<button class="link btn btn-outline-primary btn-card">📹</button> `
+          : ""
+      }
 
 </div>
-
-  
-     
       </div>
   `;
 
@@ -153,15 +156,6 @@ function createItemElement(item) {
 // FUNÇÂO UPDATE CATEGORY
 
 function updateCategories() {
-
-/*   const totalCards = cardsList.reduce((acc, item) => {
-    if (item.category === "Total") {
-      return acc + 1;
-    } else {
-      return acc;
-    }
-  }, 0); */
-
   const totalFrontend = cardsList.reduce((acc, item) => {
     if (item.category === "Front-end") {
       return acc + 1;
@@ -194,11 +188,12 @@ function updateCategories() {
     }
   }, 0);
 
-  // nTotalCards.innerText = totalCards;
   nFrontend.innerText = totalFrontend;
   nBackend.innerText = totalBackend;
   nFullStack.innerText = totalFullStack;
   nSoftSkills.innerText = totalSoftSkills;
+  nTotalCards.innerText =
+  totalFrontend + totalBackend + totalFullStack + totalSoftSkills;
 }
 
 // ATUALIZA HTML DA LISTA

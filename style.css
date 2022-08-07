@@ -32,7 +32,6 @@ header {
 }
 
 
-
 #container {
   display: flex;
   flex-direction: row;
@@ -82,23 +81,12 @@ form button {
 }
 
 
-.remove{
+.remove, .edit, .link{
 width: 200px;
 
 }
 
-.edit{
-
-  width: 200px;
-}
-
-
-.link{
-
-  width: 200px;
-}
 /************************** LEFT COLUMN *****************************/
-
 #left-column {
   min-height: 100%;
   min-width: 400px;
@@ -204,7 +192,6 @@ iframe{
 }
 
 
-
 ul li h3 {
   margin-top: 0;
 }
@@ -214,8 +201,6 @@ ul li h3 {
   justify-content: space-evenly;
   gap: 10px;
 }
-
-
 
 
 /**************************** FOOTER ****************/
