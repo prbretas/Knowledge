@@ -1,4 +1,4 @@
 # Knowledge
 
 
-https://prbretas.github.io/Knowledge/
+https://prbretas.github.io/KnowledgeCards/
