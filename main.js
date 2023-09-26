@@ -74,27 +74,21 @@ function createItem() {
   updateScreen(cardsList);
   saveList();
 }
-
-
 // FUNÇÂO EDITAR ITENS
 function editItem(itemToEdit) {
   const { title, about, category, description, link } = itemToEdit;
-
   inTitle.value = title;
   inAbout.value = about;
   inCategory.value = category;
   inDescription.value = description;
   inLink.value = link;
-
   editingItemId = itemToEdit.id;
 }
-
 function removeItem(itemId) {
   const response = confirm("Deseja realmente excluir o card?");
 
   if (response) {
     cardsList = cardsList.filter((item) => item.id !== itemId);
-
     updateScreen(cardsList);
     saveList();
   }
@@ -114,20 +108,18 @@ function createItemElement(item) {
       <p><strong>Descrição:</strong> 
       ${item.description}</p>
 
-      <iframe src="${
-        item.link // autoplay; 
-      }"  class="iframe" width="350" height="315" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="${item.link // autoplay;
+    }"  class="iframe" width="350" height="315" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
     <div class="div-card-btn">
 
     <button class="remove btn btn-outline-danger btn-card">🗑️ Excluir</button>
       <a href="#formulario"><button class="edit btn btn-outline-warning btn-card">📝 Editar</button><a>
 
-      ${
-        item.link
-          ? `<button class="link btn btn-outline-primary btn-card">📹 Link</button>`
-          : ""
-      }
+      ${item.link
+      ? `<button class="link btn btn-outline-primary btn-card">📹 Link</button>`
+      : ""
+    }
 
 </div>
       </div>
@@ -193,7 +185,7 @@ function updateCategories() {
   nFullStack.innerText = totalFullStack;
   nSoftSkills.innerText = totalSoftSkills;
   nTotalCards.innerText =
-  totalFrontend + totalBackend + totalFullStack + totalSoftSkills;
+    totalFrontend + totalBackend + totalFullStack + totalSoftSkills;
 }
 
 // ATUALIZA HTML DA LISTA
@@ -231,4 +223,3 @@ btnClearSearch.addEventListener("click", () => {
 });
 
 recoverList();
-
